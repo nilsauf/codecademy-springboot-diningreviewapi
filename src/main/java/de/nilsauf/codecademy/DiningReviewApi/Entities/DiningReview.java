@@ -2,10 +2,7 @@ package de.nilsauf.codecademy.DiningReviewApi.Entities;
 
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Data
@@ -20,6 +17,9 @@ public class DiningReview {
     @Column(nullable = false)
     private Long restaurantId;
 
+    @Enumerated(EnumType.STRING)
+    private DiningReviewState state;
+
     private Integer scorePeanut;
 
     private Integer scoreEgg;
@@ -28,4 +28,9 @@ public class DiningReview {
 
     private String comment;
 
+    public enum DiningReviewState {
+        Pending,
+        Accepted,
+        Rejected
+    }
 }
