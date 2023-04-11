@@ -14,6 +14,7 @@ public class Restaurant {
     private Long id;
 
     private String name;
+    private String zipCode;
     private Integer scoreBestRestaurant;
     private Integer scorePeanut;
     private Integer scoreEgg;
