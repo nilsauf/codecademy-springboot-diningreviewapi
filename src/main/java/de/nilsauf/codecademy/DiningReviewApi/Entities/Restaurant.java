@@ -1,10 +1,10 @@
 package de.nilsauf.codecademy.DiningReviewApi.Entities;
 
 import lombok.Data;
-import org.springframework.data.annotation.Id;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 @Entity
 @Data
